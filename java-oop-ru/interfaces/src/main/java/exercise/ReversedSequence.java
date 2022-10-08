@@ -2,7 +2,7 @@ package exercise;
 
 // BEGIN
 public class ReversedSequence implements CharSequence {
-    String text;
+    private String text;
 
     public ReversedSequence(String text) {
         this.text = text;
@@ -19,15 +19,12 @@ public class ReversedSequence implements CharSequence {
 
     @Override
     public CharSequence subSequence(int i, int i1) {
-        return null;
+        return text.substring(i, i1);
     }
 
     public String toString(String text) {
-        char[] result = new char[text.length()];
-        for (int i = text.length(); i >= 0; i--) {
-            result[i] = text.charAt(i);
-        }
-        return result.toString();
+        StringBuilder builder = new StringBuilder(text);
+        this.text = builder.reverse().toString();
     }
 }
 // END
