@@ -1,8 +1,8 @@
 package exercise;
 
-// BEGIN
-src/main/java/exercise/Segment.java
+import java.awt.*;
 
+// BEGIN
 class Segment {
     private Point beginPoint;
     private Point endPoint;
@@ -26,5 +26,4 @@ class Segment {
         return new Point(newX, newY);
     }
 }
-
 // END
