@@ -24,7 +24,7 @@ public class Cottage implements Home {
     }
 
     public String toString() {
-        return String.format("%d этажный коттедж площадью %s метров", flourCount, getArea());
+        return String.format("%s этажный коттедж площадью %s метров", flourCount, area);
 //        return flourCount+ " этажный коттедж площадью " + area +" метров";
     }
 

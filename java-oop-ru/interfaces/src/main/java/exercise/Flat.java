@@ -6,10 +6,10 @@ public class Flat implements Home {
     private double balconyArea;
     private int floor;
 
-    public Flat(double area, double balconyArea, int flor) {
+    public Flat(double area, double balconyArea, int floor) {
         this.area = area;
         this.balconyArea = balconyArea;
-        this.floor = flor;
+        this.floor = floor;
     }
 
     @Override
@@ -20,14 +20,14 @@ public class Flat implements Home {
     @Override
     public int compareTo(Home another) {
         double anotherArea = another.getArea();
-        if (area > anotherArea) return 1;
-        if (area < anotherArea) return -1;
-        if (area == anotherArea) return 0;
+        if (getArea() > anotherArea) return 1;
+        if (getArea() < anotherArea) return -1;
+        if (getArea() == anotherArea) return 0;
         return 99;
     }
 
     public String toString() {
-        return String.format("Квартира площадью %a метров на %f этаже", getArea(), floor);
+        return String.format("Квартира площадью %s метров на %s этаже", getArea(), floor);
 //        return "Квартира площадью " + (area + balconyArea) + " метров на " + floor + " этаже";
     }
 }
