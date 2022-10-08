@@ -24,7 +24,7 @@ public class ReversedSequence implements CharSequence {
 
     public String toString(String text) {
         StringBuilder builder = new StringBuilder(text);
-        this.text = builder.reverse().toString();
+        return builder.reverse().toString();
     }
 }
 // END
