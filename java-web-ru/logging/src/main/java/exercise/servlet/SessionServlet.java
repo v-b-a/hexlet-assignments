@@ -77,7 +77,7 @@ public class SessionServlet extends HttpServlet {
         Map<String, String> user = users.findByEmail(email);
 
         // BEGIN
-        LOGGER.log(Level.INFO, "Попытка авторизации");
+        LOGGER.log(Level.INFO, "Try authorization user" + email);
         // END
 
         if (user == null || !user.get("password").equals(password)) {

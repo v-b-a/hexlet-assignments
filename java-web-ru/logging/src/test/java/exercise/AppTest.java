@@ -236,7 +236,24 @@ class AppTest {
     }
 
     // BEGIN
-    
+//    @Test
+//    void testUserRegister() throws IOException, ParseException {
+//        CloseableHttpClient client = HttpClients.createDefault();
+//        HttpPost postRequest = new HttpPost(baseUrl + "/login");
+//        List<NameValuePair> params = new ArrayList<>();
+//        params.add(new BasicNameValuePair("email", "lavern.keeling@gmail.com"));
+//        params.add(new BasicNameValuePair("password", "password"));
+//        postRequest.setEntity(new UrlEncodedFormEntity(params));
+//        CloseableHttpResponse response = client.execute(postRequest);
+//
+//        assertThat(response.getCode()).isEqualTo(200);
+//
+//        HttpEntity entity = response.getEntity();
+//        String content = EntityUtils.toString(entity);
+//
+//        assertThat(content).contains("Выход");
+//        assertThat(content).doesNotContain("Вход");
+//    }
     // END
 
     @AfterAll
