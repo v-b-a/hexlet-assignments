@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.GenerationType;
+import java.util.List;
 
 // BEGIN
 @Entity
@@ -19,6 +20,7 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Lob
     private String body;
     @ManyToOne
     private Category category;
