@@ -3,7 +3,6 @@ package exercise.controller;
 import exercise.model.Article;
 import exercise.repository.ArticleRepository;
 
-import liquibase.pro.packaged.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,6 +47,5 @@ public class ArticlesController {
     public Article getArticle(@PathVariable long id) {
         return this.articleRepository.findById(id);
     }
-
     // END
 }
