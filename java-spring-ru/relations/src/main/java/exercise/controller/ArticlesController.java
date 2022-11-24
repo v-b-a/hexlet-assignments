@@ -37,13 +37,13 @@ public class ArticlesController {
     public void createArticle(@RequestBody Article article) {
         this.articleRepository.save(article);
     }
+
     @PatchMapping(path = "/{id}")
     public void updateArticle(@RequestBody Article article, @PathVariable long id) {
-        Article newArticle = this.articleRepository.findById(id);
-        newArticle.setBody(article.getBody());
-        newArticle.setName(article.getName());
-        newArticle.setCategory(article.getCategory());
+        article.setId(id);
+        this.articleRepository.save(article);
     }
+
     @GetMapping(path = "/{id}")
     public Article getArticle(@PathVariable long id) {
         return this.articleRepository.findById(id);
